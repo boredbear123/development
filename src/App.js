@@ -19,12 +19,12 @@ function App() {
   const [yearFilters, setYearFilters] = useState([]);
   const [sort, setSort] = useState(false);
   //const [sneakers, setSneaker] = useState(sneakerData);
-  const updateCart = (uid) => {
+  const updateCart = (id) => {
     let newCart = cart;
-    if (newCart[uid]) {
-      newCart[uid] += 1;
+    if (newCart[id]) {
+      newCart[id] += 1;
     } else {
-      newCart[uid] = 1;
+      newCart[id] = 1;
     }
     setCart({ ...newCart });
   }
@@ -94,8 +94,9 @@ function App() {
     return a.price - b.price
   }
   // handling the computed array
-  const computedFilteredArray = sneakerData.filter(item => filterByPrice(item)).filter(item => filterByYear(item));
+  let computedFilteredArray = sneakerData.filter(item => filterByPrice(item)).filter(item => filterByYear(item));
   computedFilteredArray.sort((a, b) => sortChange(a, b))
+
 
   //<DropDown></DropDown>
 
@@ -126,9 +127,9 @@ function App() {
             {Object.keys(cart).map((key) => {
               return (
                 <div class="cart_text cart_item">
-                  <p class="cart_item_name">{sneakerData[key].name}</p>
+                  <p class="cart_item_name">{computedFilteredArray[key].name}</p>
                   <p>{cart[key]}</p>
-                  <p>${sneakerData[key].price}</p>
+                  <p>${computedFilteredArray[key].price}</p>
                 </div>
               )
             })}
