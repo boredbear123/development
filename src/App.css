@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   background-color: #f8f8f8;
 }
@@ -12,31 +12,44 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+.appHeader {
   background-color: #282c34;
-  min-height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+#appTitle1 { 
+  /* font-family: Haettenschweiler;  */
+  /* font-family: 'Tactico', sans-serif; */
+  font-family: Calluna,Georgia,serif;
+  font-size: 4rem; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 600; 
+  color: white;
+  margin: 0rem;
+  padding: 0rem;
+}
+#appTitle2 { 
+  /* font-family: Haettenschweiler;  */
+  font-family: 'Tactico', sans-serif;
+  /* font-family: Calluna,Georgia,serif; */
+  font-size: 2.75rem; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 300; 
+  color: white;
+  margin: 0rem;
+  padding: 0rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .sneaker_img_box {
   height: 10rem;
@@ -81,6 +94,10 @@
 
 .sneaker_item {
   width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   height: fit-content;
   padding: 1rem;
   margin:0.5rem;

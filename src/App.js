@@ -102,8 +102,11 @@ function App() {
 
   return (
     <div className="App">
+      <div class="appHeader">
+        <h1 id="appTitle1">AIR JORDAN</h1>
+        <h1 id="appTitle2">OUTFITTERS</h1>
+      </div>
 
-      <h1>Air Jordan Outfitters</h1>
       <div id="main_content">
         <div id="filter_box">
           <CheckedBox priceFilter={priceFilter} yearFilter={yearFilter} removePriceFilter={removePriceFilter} removeYearFilter={removeYearFilter}></CheckedBox>
@@ -127,9 +130,9 @@ function App() {
             {Object.keys(cart).map((key) => {
               return (
                 <div class="cart_text cart_item">
-                  <p class="cart_item_name">{computedFilteredArray[key].name}</p>
+                  <p class="cart_item_name">{sneakerData[key].name}</p>
                   <p>{cart[key]}</p>
-                  <p>${computedFilteredArray[key].price}</p>
+                  <p>${sneakerData[key].price}</p>
                 </div>
               )
             })}
